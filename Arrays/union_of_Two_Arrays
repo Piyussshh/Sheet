@@ -1,0 +1,68 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    int T,N,M;
+    int i,j,k;
+    int a1[100],a2[100],final[100];
+    bool flag;
+    int count=0;
+    
+    cin>>T;
+    
+    while(T--){
+        
+        cin>>N>>M;
+        for(i=0;i<N;i++){
+            cin>>a1[i];
+        }
+        for(i=0;i<M;i++){
+            cin>>a2[i];
+        }
+        final[0]=a1[0];
+		k=1;
+          
+
+		  
+      
+         for(i=0;i<N;i++){
+             flag=true;
+             for(j=0;j<k;j++){
+                 if(a1[i]==final[j])
+                 {
+                     flag=false;
+                 }
+             }
+             if(flag)
+             {
+                 final[j]=a1[i];
+                 
+                 k++;
+             }
+         }
+         for(i=0;i<M;i++){
+             flag=true;
+             for(j=0;j<k;j++){
+
+                 if(a2[i]==final[j])
+                 {
+                     flag=false;
+                 }
+             }
+             if(flag)
+             {
+                 final[j]=a2[i];
+                 k++;
+             }
+         }
+        
+        cout<<k<<endl;
+		k=1;
+        
+        
+        
+    
+    }
+    
+    
+}
